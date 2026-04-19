@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 antialiased;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(8, 145, 178, 0.3), transparent 30%),
+    radial-gradient(circle at 80% 10%, rgba(56, 189, 248, 0.2), transparent 25%),
+    linear-gradient(180deg, #020617 0%, #0f172a 100%);
+  min-height: 100vh;
+}
+
+.panel {
+  @apply rounded-2xl border border-slate-800/80 bg-slate-900/60 backdrop-blur-xl;
+}
+
+.badge {
+  @apply inline-flex items-center rounded-full border border-brand-400/40 bg-brand-500/20 px-3 py-1 text-xs font-medium text-brand-100;
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.floaty {
+  animation: floaty 5s ease-in-out infinite;
+}
